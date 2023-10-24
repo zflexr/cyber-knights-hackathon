@@ -2,7 +2,7 @@ var express = require('express');
 var baseController = require('../controllers/base');
 var router = express.Router();
 
-router.post('/', async function(req, res, next) {
+router.get('/', async function(req, res, next) {
   const { address } = req.query;
   try {
     const result = await baseController.runIt(address)
